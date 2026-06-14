@@ -1,0 +1,26 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZMSCDS_I_INV
+    with 
+{
+ @UI.identification:[{position:10 ,label:'Sale id'}]
+    Soid;
+     @UI.identification:[{position:20 ,label:'Item id'}]
+    ItemId;
+     @UI.identification:[{position:30 ,label:'Invoice Id'}]
+    InvoiceId;
+     @UI.identification:[{position:40 ,label:'Buyer'}]
+    Buyer;
+     @UI.identification:[{position:50 ,label:'Billing Amount'}]
+    BillingAmt;
+     @UI.identification:[{position:60 ,label:'Currency'}]
+    Currency;
+     @UI.identification:[{position:70 ,label:'local last changed'}]
+    LocalLastChanged;
+     @UI.identification:[{position:80 ,label:'last changed'}]
+    LastChanged;
+     @UI.identification:[{position:90 ,label:'local changed by'}]
+    LocalChangedBy;
+     @UI.identification:[{position:100 ,label:'last changed by'}]
+    LastChangedBy;
+    
+}

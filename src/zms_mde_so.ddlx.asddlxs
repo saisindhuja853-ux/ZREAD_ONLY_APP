@@ -1,0 +1,78 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:{
+typeName: 'Salesorder',
+typeNamePlural : 'salesorders',
+
+title:{type: #STANDARD,
+       label: 'Orderdetails',
+       value : 'Soid'},
+ description:{type: #STANDARD,
+       label: 'Orderdetails',
+       value : 'Soid'} }
+
+
+annotate entity ZMSCDS_R_SO with
+{
+  @UI.facet:[{ id :'Orderdetails',
+               purpose : #STANDARD,
+               position: 10,
+               label: 'Order details',
+               type: #IDENTIFICATION_REFERENCE
+               },
+               { id :'Custdetails',
+               purpose : #STANDARD,
+               position: 20,
+               label: 'Customer details',
+               type: #IDENTIFICATION_REFERENCE ,
+               targetElement: '_cust'},
+               { id :'Itemdetails',
+               purpose : #STANDARD,
+               position: 30,
+               label: 'Item details',
+               type: #LINEITEM_REFERENCE ,
+               targetElement: '_item'}]
+
+  @UI.lineItem : [ { position: 10, label: 'Sales order id'} ]
+  @UI.identification:[ { position: 10, label: 'Sales order id'} ]
+  @UI.selectionField : [{  position: 10 } ]
+  @EndUserText.label: 'Sales order id'
+  Soid;
+  @UI.lineItem : [ { position: 20, label: 'Buyer'} ]
+  @UI.identification: [ { position: 20, label: 'Buyer'} ]
+  @UI.selectionField : [{  position: 20 } ]
+  @EndUserText.label: 'Buyer'
+  Buyer;
+  @UI.lineItem : [ { position: 30, label: 'Sales person Name'} ]
+  @UI.identification : [ { position: 30, label: 'Sales person Name'} ]
+  SalesPerson;
+  @UI.lineItem : [ { position: 40, label: 'Sales order time'} ]
+  @UI.identification : [ { position: 40, label: 'Sales order time'} ]
+  SalesTimestamp;
+  @UI.lineItem : [ { position: 50, label: 'Sales Manger'} ]
+  @UI.identification : [ { position: 50, label: 'Sales Manger'} ]
+  @UI.selectionField : [{  position: 30 } ]
+  @EndUserText.label: 'Sales Manager'
+  SalesManager;
+  @UI.lineItem : [ { position: 60, label: 'Sales order approval time'} ]
+  @UI.identification : [ { position: 60, label: 'Sales order approval time'} ]
+  ApprovalTimestamp;
+  @UI.lineItem : [ { position: 70, label: 'Created by'} ]
+  @UI.identification : [ { position: 70, label: 'Created by'} ]
+  CreatedBy;
+  @UI.lineItem : [ { position: 80, label: 'Created on'} ]
+  @UI.identification : [ { position: 80, label: 'Created on'} ]
+  CreatedOn;
+  @UI.lineItem : [ { position: 90, label: 'Created by'} ]
+  @UI.identification : [ { position: 90, label: 'Created by'} ]
+  ChangedBy;
+  @UI.lineItem : [ { position: 100, label: 'changed on'} ]
+  @UI.identification : [ { position: 100, label: 'changed on'} ]
+  ChangedOn;
+  @UI.lineItem : [ { position: 110, label: 'url'} ]
+  @UI.identification : [ { position: 110, label: 'url'} ]
+  Url;
+  //    /* Associations */
+  //    _cust;
+  //    _item;
+
+}

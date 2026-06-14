@@ -1,0 +1,67 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZMSCDS_I_SOIT
+    with 
+{
+@UI.facet:[{ id :'Itemdetails',
+               purpose : #STANDARD,
+               position: 10,
+               label: 'Item details',
+               type: #IDENTIFICATION_REFERENCE},
+               { id :'Proddetails',
+               purpose : #STANDARD,
+               position: 20,
+               label: 'product details',
+               type: #IDENTIFICATION_REFERENCE,
+               targetElement: '_prod'},
+               { id :'Invoicedetails',
+               purpose : #STANDARD,
+               position: 30,
+               label: 'Invoice details',
+               type: #IDENTIFICATION_REFERENCE,
+               targetElement: '_inv'},
+               { id :'Deliverydetails',
+               purpose : #STANDARD,
+               position: 40,
+               label: 'Delivery details',
+               type: #IDENTIFICATION_REFERENCE,
+               targetElement: '_dlsh'}]
+               
+@UI.lineItem:[{position:10 ,label:'Sales order id'}]
+@UI.identification:[{position:10 ,label:'Sales order id'}]
+    Soid;
+    @UI.lineItem:[{position:20 ,label:'Item id'}]
+    @UI.identification:[{position:20 ,label:'Item id'}]
+    ItemId;
+    @UI.lineItem:[{position:30 ,label:'Product id'}]
+     @UI.identification:[{position:30 ,label:'Product id'}]
+    Product;
+    @UI.lineItem:[{position:40 ,label:'Amount'}]
+     @UI.identification:[{position:40 ,label:'Amount'}]
+    Amount;
+    @UI.lineItem:[{position:50 ,label:'Currency'}]
+    @UI.identification:[{position:50 ,label:'Currency'}]
+    Currency;
+    @UI.lineItem:[{position:60 ,label:'Sales person'}]
+     @UI.identification:[{position:60 ,label:'Sales person'}]
+    SalesPerson;
+    @UI.lineItem:[{position:70 ,label:'Sales time'}]
+    @UI.identification:[{position:70 ,label:'Sales time'}]
+    SalesTimestamp;
+    @UI.lineItem:[{position:80 ,label:'Sales Manager'}]
+     @UI.identification:[{position:80 ,label:'Sales Manager'}]
+    SalesManager;
+    @UI.lineItem:[{position:90 ,label:'Sales approval time'}]
+     @UI.identification:[{position:90 ,label:'Sales approval time'}]
+    ApprovalTimestamp;
+    @UI.lineItem:[{position:100 ,label:'Changed by'}]
+     @UI.identification:[{position:100 ,label:'Changed by'}]
+    ChangedBy;
+    @UI.lineItem:[{position:110 ,label:'Changed on'}]
+    @UI.identification:[{position:110 ,label:'Changed on'}]
+    ChangedOn;
+    @UI.lineItem:[{position:120 ,label:'Image item'}]
+     @UI.identification:[{position:120 ,label:'Image item'}]
+    ImageItem;
+   
+    
+}

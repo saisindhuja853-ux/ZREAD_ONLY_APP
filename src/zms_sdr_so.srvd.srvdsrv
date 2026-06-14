@@ -1,0 +1,9 @@
+@EndUserText.label: 'servide definition : sales app read only'
+define service ZMS_SDR_SO {
+  expose ZMSCDS_R_SO;
+  expose ZMSCDS_I_SOIT;
+  expose ZMSCDS_I_PROD;
+  expose ZMSCDS_I_CUST;
+  expose ZMSCDS_I_INV;
+  expose ZMSCDS_I_DLSH;
+}
